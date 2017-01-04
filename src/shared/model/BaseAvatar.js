@@ -217,13 +217,6 @@ BaseAvatar.prototype.setVelocity = function(velocity)
         this.updateVelocities();
     }
 };
-function boosta(velocity){
-console.log('print');
-if (BaseAvatar.prototype.speed === true) {
-	BaseAvatar.prototype.velocity = 66;
-    this.updateVelocities();
-}
-}
 /**
  * Update velocities
  */
