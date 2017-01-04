@@ -88,6 +88,7 @@ BaseAvatar.prototype.directionInLoop = true;
  *
  * @return {Boolean}
  */
+ BaseAvatar.prototype.speed = false;
  
  function sp1(){
 	 BaseAvatar.prototype.speed = true;
