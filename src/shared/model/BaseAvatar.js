@@ -44,7 +44,7 @@ BaseAvatar.prototype.velocity = 16;
  *
  * @type {Float}
  */
-BaseAvatar.prototype.angularVelocityBase = 5.8/1000;
+BaseAvatar.prototype.angularVelocityBase = 2.8/1000;
 
 /**
  * Radius
