@@ -4,27 +4,27 @@
  * @param {Number} x
  * @param {Number} y
  */
-function BonusSelfStraightAngle(x, y)
+function BonusEnemyStraightAngle(x, y)
 {
     BonusEnemy.call(this, x, y);
 }
 
-BonusSelfStraightAngle.prototype = Object.create(BonusEnemy.prototype);
-BonusSelfStraightAngle.prototype.constructor = BonusSelfStraightAngle;
+BonusEnemyStraightAngle.prototype = Object.create(BonusEnemy.prototype);
+BonusEnemyStraightAngle.prototype.constructor = BonusEnemyStraightAngle;
 
 /**
  * Duration
  *
  * @type {Number}
  */
-BonusSelfStraightAngle.prototype.duration = 5000;
+BonusEnemyStraightAngle.prototype.duration = 5000;
 
 /**
  * Probability
  *
  * @type {Number}
  */
-BonusSelfStraightAngle.prototype.probability = 0.6;
+BonusEnemyStraightAngle.prototype.probability = 0.6;
 
 /**
  * Get effects
@@ -33,7 +33,7 @@ BonusSelfStraightAngle.prototype.probability = 0.6;
  *
  * @return {Array}
  */
-BonusSelfStraightAngle.prototype.getEffects = function(avatar)
+BonusEnemyStraightAngle.prototype.getEffects = function(avatar)
 {
     return [
         ['directionInLoop', false],
