@@ -82,6 +82,7 @@ RoomConfigController.prototype.togglePreset = function(preset)
     }
 
     this.applyPreset(preset);
+	console.log(preset);
 };
 
 /**
