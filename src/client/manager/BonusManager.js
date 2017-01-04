@@ -42,7 +42,8 @@ BonusManager.prototype.spritePosition = [
     'BonusEnemyInverse',
     'BonusSelfSmall',
     'BonusGameClear',
-    'BonusEnemyStraightAngle'
+    'BonusEnemyStraightAngle',
+	'BonusSelfStraightAngle'
 ];
 
 /**
