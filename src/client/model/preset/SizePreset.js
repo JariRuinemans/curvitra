@@ -24,4 +24,3 @@ SizePreset.prototype.name = 'Super size me';
 SizePreset.prototype.bonuses = [
     'BonusEnemyBig'
 ];
-sp2();

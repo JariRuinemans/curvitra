@@ -29,4 +29,3 @@ SoloPreset.prototype.bonuses = [
     'BonusGameBorderless',
     'BonusGameClear'
 ];
-sp2();
