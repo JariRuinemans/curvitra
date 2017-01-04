@@ -41,6 +41,7 @@ BaseAvatar.prototype.constructor = BaseAvatar;
 function boosta(){
 	if(BaseAvatar.prototype.speed === true){
 		BaseAvatar.prototype.velocity = 16;
+		console.log('speeeed');
 	}else{
 		BaseAvatar.prototype.velocity = 16;
 	}
