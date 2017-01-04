@@ -80,7 +80,7 @@ RoomConfigController.prototype.togglePreset = function(preset)
 		
         return this.applyPreset(this.config.getDefaultPreset());
     }
-	console.log(preset.hasName());
+	console.log(RoomConfigController.prototype.name);
 	for (var bonus in this.config.bonuses) {
 		if (preset.hasName() === 'Speed of light') {
 			console.log('YES ACTIVATED YES YES');
