@@ -29,7 +29,6 @@ RoomConfig.prototype.bonusClasses = {
     BonusEnemyBig: 'bonus-enemy-big',
     BonusEnemyInverse: 'bonus-enemy-inverse',
     BonusEnemyStraightAngle: 'bonus-enemy-straight-angle',
-	BonusSelfStraightAngle: 'bonus-self-straight-angle',
     BonusGameBorderless: 'bonus-game-borderless',
     BonusAllColor:'bonus-all-color',
     BonusGameClear: 'bonus-all-clear'

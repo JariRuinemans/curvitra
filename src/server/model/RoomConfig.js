@@ -28,8 +28,7 @@ RoomConfig.prototype.bonusTypes = {
     BonusGameBorderless: BonusGameBorderless,
     BonusAllColor: BonusAllColor,
     BonusGameClear: BonusGameClear,
-	BonusEnemyStraightAngle: BonusEnemyStraightAngle,
-    BonusSelfStraightAngle: BonusSelfStraightAngle
+    BonusEnemyStraightAngle: BonusEnemyStraightAngle
 };
 
 /**
