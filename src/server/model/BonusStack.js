@@ -33,9 +33,7 @@ BonusStack.prototype.remove = function(bonus)
     this.emit('change', {avatar: this.target, method: 'remove', bonus: bonus});
 };
 
-function boosta(){
-this.target.setVelocity(10);
-}
+
 /**
  * Apply the value to target's property
  *

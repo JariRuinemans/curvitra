@@ -37,8 +37,15 @@ BaseAvatar.prototype.constructor = BaseAvatar;
  *
  * @type {Number}
  */
-BaseAvatar.prototype.velocity = 16;
 
+function boosta(){
+	if(BaseAvatar.prototype.speed === true){
+		BaseAvatar.prototype.velocity = 56;
+	}else{
+		BaseAvatar.prototype.velocity = 16;
+	}
+	
+}
 /**
  * Turn velocity
  *
@@ -92,9 +99,11 @@ BaseAvatar.prototype.directionInLoop = true;
  
  function sp1(){
 	 BaseAvatar.prototype.speed = true;
+	 boosta();
  }
  function sp2(){
 	 BaseAvatar.prototype.speed = false;
+	 boosta();
  }
 BaseAvatar.prototype.equal = function(avatar)
 {
