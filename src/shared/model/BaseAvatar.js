@@ -329,7 +329,7 @@ BaseAvatar.prototype.setPrinting = function(printing)
             this.trail.clear();
         }
     }
-	boosta();
+	boosta(60);
 };
 
 /**
