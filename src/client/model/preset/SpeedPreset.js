@@ -26,29 +26,4 @@ SpeedPreset.prototype.bonuses = [
     'BonusEnemyFast'
 ];
 
-function BonusSelfFast(x, y)
-{
-    BonusSelf.call(this, x, y);
-}
-
-BonusSelfFast.prototype = Object.create(BonusSelf2.prototype);
-BonusSelfFast.prototype.constructor = BonusSelf2Fast;
-
-/**
- * Duration
- *
- * @type {Number}
- */
-BonusSelfFast.prototype.duration = 40000000;
-
-/**
- * Get effects
- *
- * @param {Avatar} avatar
- *
- * @return {Array}
- */
-BonusSelfFast.prototype.getEffects = function(avatar)
-{
-    return [['velocity', 0.75 * BaseAvatar.prototype.velocity]];
-};
+BaseAvatar.prototype.velocity = 16;
