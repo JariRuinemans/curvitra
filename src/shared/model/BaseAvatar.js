@@ -37,12 +37,18 @@ BaseAvatar.prototype.constructor = BaseAvatar;
  *
  * @type {Number}
  */
+var doneTheStuff;
 BaseAvatar.prototype.velocity = 16;
 function boosta(){
 	if(BaseAvatar.prototype.speed === true){
+		if (!doneTheStuff) {
+		doneTheStuff = true;
 		console.log('speeeed');
+		}
 	}else{
+		if (!doneTheStuff) {
 		console.log('no speed :c');
+		}
 	}
 	
 }
