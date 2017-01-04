@@ -5,11 +5,11 @@ A web multiplayer Tron game like with curves
 
 ## Installation
 
-# Get the repo
+### Get the repo
 git clone https://github.com/Elao/curvytron.git
 cd curvytron
 
-# Install dependencies
+### Install dependencies
 sudo apt-get install npm
 sudo npm install -g bower
 sudo npm install -g gulp
@@ -27,13 +27,13 @@ source ~/.bashrc
 nodebrew install-binary v0.12.7
 nodebrew use v0.12.7
 
-# Build the software
+### Build the software
 npm install
-# bower install  # this appears to be completed within the npm install and this command errors
+### bower install  # this appears to be completed within the npm install and this command errors
 gulp
 nodejs bin/curvytron.js
 
-# Locate your machine on network
+### Locate your machine on network
 ifconfig
 
 ---
