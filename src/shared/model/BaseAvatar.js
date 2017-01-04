@@ -168,13 +168,7 @@ BaseAvatar.prototype.setAngle = function(angle)
  * @param {Number} step
  */
 BaseAvatar.prototype.update = function(step) {
-	if (BaseAvatar.prototype.speed === true) {
-		BaseAvatar.prototype.velocity = 66;
-		velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
-		this.velocity = velocity;
-        this.updateVelocities();
-		console.log('speedsuccess!');
-	}
+
 };
 
 /**
@@ -324,6 +318,14 @@ BaseAvatar.prototype.setPrinting = function(printing)
             this.trail.clear();
         }
     }
+	console.log('print');
+	if (BaseAvatar.prototype.speed === true) {
+		BaseAvatar.prototype.velocity = 66;
+		velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
+		this.velocity = velocity;
+        this.updateVelocities();
+		console.log('speedsuccess!');
+	}
 };
 
 /**
