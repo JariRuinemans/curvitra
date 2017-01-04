@@ -6,7 +6,7 @@ A web multiplayer Tron game like with curves
 ## Installation
 
 ### Get the repo
-git clone https://github.com/Elao/Curviation.git
+git clone https://github.com/JariRuinemans/curvitra.git
 
 cd Curviation
 
