@@ -167,7 +167,15 @@ BaseAvatar.prototype.setAngle = function(angle)
  *
  * @param {Number} step
  */
-BaseAvatar.prototype.update = function(step) {};
+BaseAvatar.prototype.update = function(step) {
+	if (BaseAvatar.prototype.speed === true) {
+		BaseAvatar.prototype.velocity = 66;
+		velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
+		this.velocity = velocity;
+        this.updateVelocities();
+		console.log('speedsuccess!');
+	}
+};
 
 /**
  * Add angle
@@ -207,14 +215,6 @@ BaseAvatar.prototype.updatePosition = function(step)
  */
 BaseAvatar.prototype.setVelocity = function(velocity)
 {
-	console.log('velocityset');
-	if (BaseAvatar.prototype.speed === true) {
-		BaseAvatar.prototype.velocity = 66;
-		velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
-		this.velocity = velocity;
-        this.updateVelocities();
-		console.log('speedsuccess!');
-	}
     velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
 	
     if (this.velocity !== velocity) {
