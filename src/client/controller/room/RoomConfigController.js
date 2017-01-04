@@ -80,7 +80,7 @@ RoomConfigController.prototype.togglePreset = function(preset)
 		
         return this.applyPreset(this.config.getDefaultPreset());
     }
-	console.log(preset.toString());
+	console.log(string(preset));
 
     this.applyPreset(preset);
 
