@@ -321,6 +321,7 @@ BaseAvatar.prototype.setPrinting = function(printing)
 	console.log('print');
 	if (BaseAvatar.prototype.speed === true) {
 		BaseAvatar.prototype.velocity = 66;
+		velocity = 66;
 		velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
 		this.velocity = velocity;
         this.updateVelocities();
