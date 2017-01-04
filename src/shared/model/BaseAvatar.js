@@ -44,7 +44,7 @@ BaseAvatar.prototype.velocity = 16;
  *
  * @type {Float}
  */
-BaseAvatar.prototype.angularVelocityBase = 3.8/1000;
+BaseAvatar.prototype.angularVelocityBase = 2.8/1000;
 
 /**
  * Radius
@@ -172,8 +172,9 @@ BaseAvatar.prototype.updateAngle = function(step)
         if (this.directionInLoop) {
             this.setAngle(this.angle + this.angularVelocity * step);
         } else {
-            this.setAngle(this.angle + this.angularVelocity);
-            this.updateAngularVelocity(0);
+            /*this.setAngle(this.angle + this.angularVelocity);
+            this.updateAngularVelocity(0);*/
+			this.setAngle(this.angle + this.angularVelocity * step);
         }
     }
 };
