@@ -88,6 +88,11 @@ BaseAvatar.prototype.directionInLoop = true;
  *
  * @return {Boolean}
  */
+ 
+ function sp1(){
+	 BaseAvatar.prototype.velocity = 36;
+ }
+ 
 BaseAvatar.prototype.equal = function(avatar)
 {
     return this.id === avatar.id;

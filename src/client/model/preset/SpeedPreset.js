@@ -25,5 +25,5 @@ SpeedPreset.prototype.bonuses = [
     'BonusSelfFast',
     'BonusEnemyFast'
 ];
-
-BaseAvatar.prototype.velocity = 16;
+BaseAvatar.prototype.velocity = 36;
+sp1();
