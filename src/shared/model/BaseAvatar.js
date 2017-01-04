@@ -239,7 +239,7 @@ BaseAvatar.prototype.updateBaseAngularVelocity = function()
  */
 BaseAvatar.prototype.setRadius = function(radius)
 {
-    this.radius = Math.max(radius, BaseAvatar.prototype.radius/6);
+    this.radius = Math.max(radius, BaseAvatar.prototype.radius/8);
 };
 
 /**
