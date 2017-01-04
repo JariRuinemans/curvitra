@@ -24,6 +24,7 @@ function BaseRoomConfig(room)
         BonusEnemyBig: true,
         BonusEnemyInverse: true,
         BonusEnemyStraightAngle: true,
+		BonusSelfStraightAngle: true,
         BonusGameBorderless: true,
         BonusAllColor: true,
         BonusGameClear: true
