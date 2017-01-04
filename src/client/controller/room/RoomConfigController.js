@@ -97,6 +97,7 @@ RoomConfigController.prototype.applyPreset = function(preset)
                 this.toggleBonus(bonus);
             }
         }
+		console.log(preset);
         this.config.preset = preset;
     }
 };
