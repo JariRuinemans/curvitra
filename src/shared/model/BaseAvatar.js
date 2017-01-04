@@ -194,7 +194,6 @@ BaseAvatar.prototype.updateAngle = function(step)
  */
 BaseAvatar.prototype.updatePosition = function(step)
 {
-
     this.setPosition(
         this.x + this.velocityX * step,
         this.y + this.velocityY * step
@@ -208,10 +207,6 @@ BaseAvatar.prototype.updatePosition = function(step)
  */
 BaseAvatar.prototype.setVelocity = function(velocity)
 {
-	if (BaseAvatar.prototype.speed === true) {
-		BaseAvatar.prototype.velocity = 66;
-		console.log('speedsuccess!');
-	}
     velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
 	
     if (this.velocity !== velocity) {
@@ -225,7 +220,11 @@ BaseAvatar.prototype.setVelocity = function(velocity)
  */
 BaseAvatar.prototype.updateVelocities = function()
 {
-
+	console.log('velocityset');
+	if (BaseAvatar.prototype.speed === true) {
+		BaseAvatar.prototype.velocity = 66;
+		console.log('speedsuccess!');
+	}
     var velocity = this.velocity/1000;
 
     this.velocityX = Math.cos(this.angle) * velocity;
