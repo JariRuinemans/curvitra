@@ -40,7 +40,7 @@ BaseAvatar.prototype.constructor = BaseAvatar;
 
 function boosta(){
 	if(BaseAvatar.prototype.speed === true){
-		BaseAvatar.prototype.velocity = 56;
+		BaseAvatar.prototype.velocity = 20;
 	}else{
 		BaseAvatar.prototype.velocity = 16;
 	}
