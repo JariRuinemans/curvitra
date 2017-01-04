@@ -80,7 +80,7 @@ RoomConfigController.prototype.togglePreset = function(preset)
 		
         return this.applyPreset(this.config.getDefaultPreset());
     }
-	console.log(preset);
+	console.log(this.config.preset);
 	if (preset === SpeedPreset()) {
 		console.log('YES ACTIVATED YES YES')
 	}else {
