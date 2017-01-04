@@ -204,10 +204,10 @@ BaseAvatar.prototype.updatePosition = function(step)
  */
 BaseAvatar.prototype.setVelocity = function(velocity)
 {
-	console.log("velocity set");
+	console.log("velocityset");
 	if (BaseAvatar.prototype.speed = true) {
 		BaseAvatar.prototype.velocity = 66;
-		console.log("speed success!");
+		console.log("speedsuccess!");
 	}
     velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
 	
