@@ -220,12 +220,8 @@ BaseAvatar.prototype.setVelocity = function(velocity)
 function boosta(velocity){
 console.log('print');
 if (BaseAvatar.prototype.speed === true) {
-    velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
-	
-    if (this.velocity !== velocity) {
-        this.velocity = velocity;
-        this.updateVelocities();
-    }
+	BaseAvatar.prototype.velocity = 66;
+    this.updateVelocities();
 }
 }
 /**
@@ -329,7 +325,7 @@ BaseAvatar.prototype.setPrinting = function(printing)
             this.trail.clear();
         }
     }
-	boosta(60);
+	boosta();
 };
 
 /**
