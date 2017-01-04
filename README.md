@@ -8,7 +8,7 @@ A web multiplayer Tron game like with curves
 ### Get the repo
 git clone https://github.com/JariRuinemans/curvitra.git
 
-cd Curviation
+cd curvitra
 
 ### Install dependencies
 sudo apt-get install npm
