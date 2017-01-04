@@ -82,10 +82,10 @@ RoomConfigController.prototype.togglePreset = function(preset)
     }
 	console.log(preset);
 	for (var bonus in this.config.bonuses) {
-		if (preset === true) {
-			console.log('YES ACTIVATED YES YES')
+		if (preset.hasBonus('BonusSelfFast')&&preset.hasBonus('BonusSelfFast')) {
+			console.log('YES ACTIVATED YES YES');
 		}else {
-			console.log('different one.')
+			console.log('different one.');
 		}
 	}
     this.applyPreset(preset);
