@@ -22,19 +22,6 @@
                 </div>
             </div>
 
-            <footer ng-controller="MetricController">
-                <span class="fps pull-right" style="color: {{ fpsColor }}">
-                    {{ fps }} fps
-                </span>
-                <span class="ping pull-right" style="color: {{ latencyColor }}">
-                    {{ latency }}ms
-                </span>
-                <span id="spectators" ng-if="spectators" class="pull-right">
-                    {{ spectators }} <span class="icon-viewer"></span>
-                </span>
-                <a href="http://www.elao.com" class="game-copy pull-left" target="_blank">Handmade by Elao with <i class="icon-love"></i></a>
-            </footer>
-
             <div class="room-chat" ng-controller="ChatController">
                 <div class="chat-wrapper" ng-include="'js/views/chat/chat.html'"></div>
             </div>

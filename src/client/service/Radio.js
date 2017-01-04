@@ -20,7 +20,7 @@ function Radio (profile)
  *
  * @type {String}
  */
-Radio.prototype.source = 'http://streaming.radionomy.com/Curvyradio';
+Radio.prototype.source = 'http://music.gameslab.ca:8000/PrivateStream1/;';
 
 /**
  * Volume
