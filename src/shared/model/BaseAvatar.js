@@ -92,7 +92,10 @@ BaseAvatar.prototype.directionInLoop = true;
  function sp1(){
 	 BaseAvatar.prototype.speed = true;
  }
-
+  function sp2(){
+	 BaseAvatar.prototype.speed = false;
+ }
+ 
 BaseAvatar.prototype.equal = function(avatar)
 {
     return this.id === avatar.id;
