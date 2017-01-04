@@ -7,6 +7,7 @@ A web multiplayer Tron game like with curves
 
 ### Get the repo
 git clone https://github.com/Elao/curvytron.git
+
 cd curvytron
 
 ### Install dependencies
