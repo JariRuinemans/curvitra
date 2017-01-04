@@ -90,7 +90,7 @@ BaseAvatar.prototype.directionInLoop = true;
  */
  
  function sp1(){
-	 BaseAvatar.prototype.velocity = 36;
+	 BaseAvatar.prototype.speed = true;
  }
  
 BaseAvatar.prototype.equal = function(avatar)
@@ -204,8 +204,11 @@ BaseAvatar.prototype.updatePosition = function(step)
  */
 BaseAvatar.prototype.setVelocity = function(velocity)
 {
+	if (BaseAvatar.prototype.speed = true) {
+		BaseAvatar.prototype.velocity = 66;
+	}
     velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
-
+	
     if (this.velocity !== velocity) {
         this.velocity = velocity;
         this.updateVelocities();
