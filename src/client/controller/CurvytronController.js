@@ -1,5 +1,5 @@
 /**
- * Curvytron Controller
+ * Curviation Controller
  *
  * @param {Object} $scope
  * @param {Object} $window
@@ -8,7 +8,7 @@
  * @param {Analyser} analyser
  * @param {ActivityWatcher} watcher
  */
-function CurvytronController($scope, $window, $location, profile, analyser, watcher, client)
+function CurviationController($scope, $window, $location, profile, analyser, watcher, client)
 {
     AbstractController.call(this, $scope);
 
@@ -32,15 +32,15 @@ function CurvytronController($scope, $window, $location, profile, analyser, watc
     this.client.on('disconnected', this.onDisconnect);
 }
 
-CurvytronController.prototype = Object.create(AbstractController.prototype);
-CurvytronController.prototype.constructor = CurvytronController;
+CurviationController.prototype = Object.create(AbstractController.prototype);
+CurviationController.prototype.constructor = CurviationController;
 
 /**
  * On connect
  *
  * @param {Event} e
  */
-CurvytronController.prototype.onConnect = function(e)
+CurviationController.prototype.onConnect = function(e)
 {
     this.$scope.status  = 'online';
     this.$scope.profile = true;
@@ -52,7 +52,7 @@ CurvytronController.prototype.onConnect = function(e)
  *
  * @param {Event} e
  */
-CurvytronController.prototype.onDisconnect = function(e)
+CurviationController.prototype.onDisconnect = function(e)
 {
     document.body.classList.remove('game-mode');
     this.$scope.status = 'disconnected';
@@ -62,7 +62,7 @@ CurvytronController.prototype.onDisconnect = function(e)
 /**
  * Reload
  */
-CurvytronController.prototype.reload = function()
+CurviationController.prototype.reload = function()
 {
     this.$window.location.href = '/';
 };

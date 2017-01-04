@@ -1,5 +1,5 @@
 {
-    "name": "curvytron.js",
+    "name": "Curviation.js",
     "path": "web/js/",
     "files": [
         "src/shared/**/*.js",

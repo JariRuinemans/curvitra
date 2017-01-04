@@ -4,8 +4,8 @@
     "inspector": {
         "enabled": false,
         "host": "localhost",
-        "username": "curvytron",
-        "password": "curvytron",
-        "database": "curvytron"
+        "username": "Curviation",
+        "password": "Curviation",
+        "database": "Curviation"
     }
 }

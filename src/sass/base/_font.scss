@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'curvytron';
-  src: url('../font/curvytron.eot?98929947');
-  src: url('../font/curvytron.eot?98929947#iefix') format('embedded-opentype'),
-       url('../font/curvytron.woff?98929947') format('woff'),
-       url('../font/curvytron.ttf?98929947') format('truetype'),
-       url('../font/curvytron.svg?98929947#curvytron') format('svg');
+  font-family: 'Curviation';
+  src: url('../font/Curviation.eot?98929947');
+  src: url('../font/Curviation.eot?98929947#iefix') format('embedded-opentype'),
+       url('../font/Curviation.woff?98929947') format('woff'),
+       url('../font/Curviation.ttf?98929947') format('truetype'),
+       url('../font/Curviation.svg?98929947#Curviation') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -13,14 +13,14 @@
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: 'curvytron';
-    src: url('../font/curvytron.svg?98929947#curvytron') format('svg');
+    font-family: 'Curviation';
+    src: url('../font/Curviation.svg?98929947#Curviation') format('svg');
   }
 }
 */
 
  [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "curvytron";
+  font-family: "Curviation";
   font-style: normal;
   font-weight: normal;
   speak: none;

@@ -1,5 +1,5 @@
 {
-  "name": "curvytron",
+  "name": "Curviation",
   "version": "1.4.5",
   "description": "A web multiplayer Tron game like with curves",
   "keywords": [
@@ -9,7 +9,7 @@
     "html5",
     "devops"
   ],
-  "homepage": "https://github.com/Elao/curvytron",
+  "homepage": "https://github.com/Elao/Curviation",
   "license": "MIT",
   "authors": [
     {
@@ -23,7 +23,7 @@
       "homepage": "http://thomas.jarrand.fr"
     }
   ],
-  "main": "dist/curvytron.min.js",
+  "main": "dist/Curviation.min.js",
   "dependencies": {
     "tom32i-event-emitter.js": "~0.1.*",
     "tom32i-gamepad.js": "~0.1.*",

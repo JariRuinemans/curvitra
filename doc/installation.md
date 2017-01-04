@@ -1,14 +1,14 @@
 ## Prerequisite
 
-Curvytron runs on [node.js >= v0.10](https://nodejs.org/).
-You need to install node on the machine that will run the Curvytron server.
+Curviation runs on [node.js >= v0.10](https://nodejs.org/).
+You need to install node on the machine that will run the Curviation server.
 
 ## Installation
 
 __Clone the repository__
 
-    git clone https://github.com/Elao/curvytron.git
-    cd curvytron
+    git clone https://github.com/Elao/Curviation.git
+    cd Curviation
 
 __Install dependencies__
 
@@ -21,7 +21,7 @@ __Build the game__
 
 ## Launch server
 
-    node bin/curvytron.js
+    node bin/Curviation.js
 
 ## Play
 

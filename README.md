@@ -1,4 +1,4 @@
-Curvytron
+Curviation
 =========
 
 A web multiplayer Tron game like with curves
@@ -6,9 +6,9 @@ A web multiplayer Tron game like with curves
 ## Installation
 
 ### Get the repo
-git clone https://github.com/Elao/curvytron.git
+git clone https://github.com/Elao/Curviation.git
 
-cd curvytron
+cd Curviation
 
 ### Install dependencies
 sudo apt-get install npm
@@ -42,7 +42,7 @@ npm install
 ### bower install  # this appears to be completed within the npm install and this command errors
 gulp
 
-nodejs bin/curvytron.js
+nodejs bin/Curviation.js
 
 ### Locate your machine on network
 ifconfig

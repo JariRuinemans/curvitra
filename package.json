@@ -1,5 +1,5 @@
 {
-  "name": "curvytron",
+  "name": "Curviation",
   "version": "1.4.5",
   "description": "A web multiplayer Tron game like... with curves!",
   "keywords": [
@@ -9,10 +9,10 @@
     "html5",
     "devops"
   ],
-  "homepage": "https://github.com/Elao/curvytron",
+  "homepage": "https://github.com/Elao/Curviation",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Elao/curvytron"
+    "url": "https://github.com/Elao/Curviation"
   },
   "license": "MIT",
   "contributors": [

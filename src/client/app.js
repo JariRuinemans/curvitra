@@ -1,68 +1,68 @@
-var curvytronApp = angular.module('curvytronApp', ['ngRoute', 'ngCookies', 'colorpicker.module']),
+var CurviationApp = angular.module('CurviationApp', ['ngRoute', 'ngCookies', 'colorpicker.module']),
     gamepadListener = new GamepadListener({analog: false, deadZone: 0.4});
 
-curvytronApp.service('SocketClient', SocketClient);
-curvytronApp.service('Profile', ['$rootScope', Profile]);
-curvytronApp.service('SoundManager', ['Profile', SoundManager]);
-curvytronApp.service('ActivityWatcher', ['SocketClient', ActivityWatcher]);
-curvytronApp.service('RoomRepository', ['SocketClient', RoomRepository]);
-curvytronApp.service('GameRepository', ['SocketClient', 'RoomRepository', 'SoundManager', GameRepository]);
-curvytronApp.service('Chat', ['SocketClient', 'RoomRepository', Chat]);
-curvytronApp.service('Radio', ['Profile', Radio]);
-curvytronApp.service('Notifier', ['SoundManager', 'ActivityWatcher', Notifier]);
-curvytronApp.service('Analyser', ['$rootScope', Analyser]);
+CurviationApp.service('SocketClient', SocketClient);
+CurviationApp.service('Profile', ['$rootScope', Profile]);
+CurviationApp.service('SoundManager', ['Profile', SoundManager]);
+CurviationApp.service('ActivityWatcher', ['SocketClient', ActivityWatcher]);
+CurviationApp.service('RoomRepository', ['SocketClient', RoomRepository]);
+CurviationApp.service('GameRepository', ['SocketClient', 'RoomRepository', 'SoundManager', GameRepository]);
+CurviationApp.service('Chat', ['SocketClient', 'RoomRepository', Chat]);
+CurviationApp.service('Radio', ['Profile', Radio]);
+CurviationApp.service('Notifier', ['SoundManager', 'ActivityWatcher', Notifier]);
+CurviationApp.service('Analyser', ['$rootScope', Analyser]);
 
-curvytronApp.controller(
-    'CurvytronController',
-    ['$scope', '$window', '$location', 'Profile', 'Analyser', 'ActivityWatcher', 'SocketClient', CurvytronController]
+CurviationApp.controller(
+    'CurviationController',
+    ['$scope', '$window', '$location', 'Profile', 'Analyser', 'ActivityWatcher', 'SocketClient', CurviationController]
 );
 
-curvytronApp.controller(
+CurviationApp.controller(
     'RoomsController',
     ['$scope', '$location', 'SocketClient', RoomsController]
 );
-curvytronApp.controller(
+CurviationApp.controller(
     'RoomController',
     ['$scope', '$routeParams', '$location', 'SocketClient', 'RoomRepository', 'Profile', 'Chat', 'Notifier', RoomController]
 );
-curvytronApp.controller(
+CurviationApp.controller(
     'RoomConfigController',
     ['$scope', 'RoomRepository', RoomConfigController]
 );
-curvytronApp.controller(
+CurviationApp.controller(
     'GameController',
     ['$scope', '$routeParams', '$location', 'SocketClient', 'GameRepository', 'Chat', 'Radio', 'SoundManager', GameController]
 );
-curvytronApp.controller(
+CurviationApp.controller(
     'ChatController',
     ['$scope', 'Chat', ChatController]
 );
-curvytronApp.controller(
+CurviationApp.controller(
     'PlayerListController',
     ['$scope', '$element', 'SocketClient', PlayerListController]
 );
-curvytronApp.controller(
+CurviationApp.controller(
     'RoundController',
     ['$scope', 'GameRepository', 'Notifier', RoundController]
 );
-curvytronApp.controller(
+CurviationApp.controller(
     'MetricController',
     ['$scope', 'SocketClient', MetricController]
 );
-curvytronApp.controller(
+CurviationApp.controller(
     'WaitingController',
     ['$scope', 'SocketClient', WaitingController]
 );
-curvytronApp.controller(
+CurviationApp.controller(
     'KillLogController',
     ['$scope', '$interpolate', 'SocketClient', KillLogController]
 );
-curvytronApp.controller(
+CurviationApp.controller(
     'ProfileController',
     ['$scope', 'Profile', 'Radio', 'SoundManager', ProfileController]
 );
 
-curvytronApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+CurviationApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     //$locationProvider.html5Mode(true);
     $routeProvider
         .when('/', {

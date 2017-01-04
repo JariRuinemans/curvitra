@@ -1,6 +1,6 @@
 
 /**
- * Curvytron Controller
+ * Curviation Controller
  *
  * @param {Object} $scope
  * @param {Object} $element

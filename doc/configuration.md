@@ -16,7 +16,7 @@ Details of `config.json`:
         "port": 8086,
         "username": "root",
         "password": "root",
-        "database": "curvytron"
+        "database": "Curviation"
     }
 }
 ```
@@ -25,7 +25,7 @@ Details of `config.json`:
 
 | Variable | Description | Default value | Type | Required |
 | -------- | ----------- | ------------- | ---- | -------- |
-| port | The port on which Curvytron server will run | 8080 | Number | Required |
+| port | The port on which Curviation server will run | 8080 | Number | Required |
 | googleAnalyticsId | Google Analytics Identifier | null | String | Optional |
 
 __Inspector:__

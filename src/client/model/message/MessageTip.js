@@ -32,8 +32,8 @@ MessageTip.prototype.icon = 'icon-megaphone';
  */
 MessageTip.prototype.tips = [
     'To customize your left/right controls, click the [←]/[→] buttons and press any key.',
-    'Curvytron supports gamepads! Connect it, press A, then setup your controls.',
-    'Yes, you can play Curvytron on your smartphone ;)',
+    'Curviation supports gamepads! Connect it, press A, then setup your controls.',
+    'Yes, you can play Curviation on your smartphone ;)',
     'You can add multiple players on the same computer.',
     'Green bonuses apply only to you.',
     'Red bonuses target your enemies.',

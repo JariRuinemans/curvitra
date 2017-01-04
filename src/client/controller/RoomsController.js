@@ -114,7 +114,7 @@ RoomsController.prototype.quickPlay = function()
     if (room) {
         this.joinRoom(room);
     } else {
-        this.$scope.roomName = 'Hello Curvytron!';
+        this.$scope.roomName = 'Hello Curviation!';
         this.createRoom();
     }
 };

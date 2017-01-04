@@ -3,8 +3,8 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>Copyright (C) 2015 by original authors @ fontello.com</metadata>
 <defs>
-<font id="curvytron" horiz-adv-x="1000" >
-<font-face font-family="curvytron" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<font id="Curviation" horiz-adv-x="1000" >
+<font-face font-family="Curviation" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
 <glyph glyph-name="crown" unicode="&#xe800;" d="m419 822c-39 0-71-32-71-72 0-40 32-72 71-72 39 0 74 32 74 72 0 40-35 72-74 72z m-48-222c-40-119-101-152-101-152s-52 146-109 232c-23-52-47-86-96-100-1-44 51-208 55-290l601 0c2 79 55 256 55 288-38 16-85 51-96 102-63-86-109-232-109-232s-61 33-101 152c-27-13-77-13-99 0z m-297 222c-40 0-74-32-74-72 0-40 34-72 74-72 39 0 70 32 70 72 0 40-31 72-70 72z m47-603l0-119 600 0c0 43 0 81 0 119z m644 603c-40 0-72-32-72-72 0-40 32-72 72-72 40 0 72 32 72 72 0 40-32 72-72 72z" horiz-adv-x="837" />
 <glyph glyph-name="volume-off" unicode="&#xe801;" d="m0 243v214q0 15 11 25t25 11h146l186 186q10 10 25 10t25-10 11-25v-608q0-14-11-25t-25-10-25 10l-186 186h-146q-15 0-25 11t-11 25z" horiz-adv-x="428.6" />
