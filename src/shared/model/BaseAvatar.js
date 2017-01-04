@@ -227,7 +227,7 @@ BaseAvatar.prototype.updateBaseAngularVelocity = function()
 {
     if (this.directionInLoop) {
         var ratio = this.velocity / BaseAvatar.prototype.velocity;
-        this.angularVelocityBase = ratio/2 * BaseAvatar.prototype.angularVelocityBase + Math.log(1/ratio)/3000;
+        this.angularVelocityBase = ratio*2 * BaseAvatar.prototype.angularVelocityBase + Math.log(1/ratio)/3000;
         this.updateAngularVelocity();
     }
 };
