@@ -21,3 +21,7 @@ Preset.prototype.hasBonus = function(bonus)
 {
     return this.bonuses.indexOf(bonus) > -1;
 };
+Preset.prototype.hasName = function(name)
+{
+    return name;
+};
