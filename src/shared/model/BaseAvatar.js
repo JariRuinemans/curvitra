@@ -172,9 +172,9 @@ BaseAvatar.prototype.updateAngle = function(step)
         if (this.directionInLoop) {
             this.setAngle(this.angle + this.angularVelocity * step);
         } else {
-            /*this.setAngle(this.angle + this.angularVelocity);
-            this.updateAngularVelocity(0);*/
-			this.setAngle(this.angle + this.angularVelocity * step);
+            this.setAngle(this.angle + this.angularVelocity);
+            this.updateAngularVelocity(0);
+			
         }
     }
 };
@@ -225,7 +225,7 @@ BaseAvatar.prototype.updateVelocities = function()
  */
 BaseAvatar.prototype.updateBaseAngularVelocity = function()
 {
-    if (this.directionInLoop) {
+    if (!this.directionInLoop) {
         var ratio = this.velocity / BaseAvatar.prototype.velocity;
         this.angularVelocityBase = ratio * BaseAvatar.prototype.angularVelocityBase + Math.log(1/ratio)/1000;
         this.updateAngularVelocity();
