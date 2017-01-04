@@ -37,6 +37,7 @@ BaseAvatar.prototype.constructor = BaseAvatar;
  *
  * @type {Number}
  */
+BaseAvatar.prototype.velocity = 26;
 var doneTheStuff;
 
 function boosta(){
