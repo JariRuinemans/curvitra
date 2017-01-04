@@ -37,12 +37,12 @@ BaseAvatar.prototype.constructor = BaseAvatar;
  *
  * @type {Number}
  */
-
+BaseAvatar.prototype.velocity = 16;
 function boosta(){
 	if(BaseAvatar.prototype.speed === true){
 		console.log('speeeed');
 	}else{
-		BaseAvatar.prototype.velocity = 16;
+		console.log('no speed :c');
 	}
 	
 }
@@ -327,7 +327,6 @@ BaseAvatar.prototype.setPrinting = function(printing)
             this.trail.clear();
         }
     }
-	boosta();
 };
 
 /**
