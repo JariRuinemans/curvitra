@@ -4,6 +4,7 @@
 function SpeedPreset ()
 {
     Preset.call(this);
+	sp1();
 }
 
 SpeedPreset.prototype = Object.create(Preset.prototype);
@@ -25,5 +26,4 @@ SpeedPreset.prototype.bonuses = [
     'BonusSelfFast',
     'BonusEnemyFast'
 ];
-BaseAvatar.prototype.velocity = 36;
-sp1();
+
