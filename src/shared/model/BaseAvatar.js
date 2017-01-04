@@ -44,7 +44,7 @@ BaseAvatar.prototype.velocity = 16;
  *
  * @type {Float}
  */
-BaseAvatar.prototype.angularVelocityBase = 2.8/1000;
+BaseAvatar.prototype.angularVelocityBase = 1.8/1000;
 
 /**
  * Radius
@@ -79,7 +79,7 @@ BaseAvatar.prototype.invincible = false;
  *
  * @type {Boolean}
  */
-BaseAvatar.prototype.directionInLoop = false;
+BaseAvatar.prototype.directionInLoop = true;
 
 /**
  * Equal
