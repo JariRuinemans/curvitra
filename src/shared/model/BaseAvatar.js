@@ -37,7 +37,7 @@ BaseAvatar.prototype.constructor = BaseAvatar;
  *
  * @type {Number}
  */
-BaseAvatar.prototype.velocity = 26;
+BaseAvatar.prototype.velocity = 16;
 var doneTheStuff;
 
 function boosta(){
@@ -45,7 +45,7 @@ function boosta(){
 		if (!doneTheStuff) {
 		doneTheStuff = true;
 		console.log('speeeed');
-		BaseAvatar.prototype.velocity = 26;
+		BaseAvatar.prototype.velocity = 36;
 		}
 	}else{
 		if (!doneTheStuff) {
@@ -186,7 +186,7 @@ BaseAvatar.prototype.setAngle = function(angle)
  * @param {Number} step
  */
 BaseAvatar.prototype.update = function(step) {
-
+boosta();
 };
 
 /**
@@ -336,6 +336,7 @@ BaseAvatar.prototype.setPrinting = function(printing)
             this.trail.clear();
         }
     }
+	boosta();
 };
 
 /**
