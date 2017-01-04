@@ -15,3 +15,4 @@ EmptyPreset.prototype.constructor = EmptyPreset;
  * @type {String}
  */
 EmptyPreset.prototype.name = 'No bonuses';
+sp2();
