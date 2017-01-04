@@ -220,7 +220,6 @@ BaseAvatar.prototype.setVelocity = function(velocity)
 function boosta(velocity){
 console.log('print');
 if (BaseAvatar.prototype.speed === true) {
-	BaseAvatar.prototype.velocity = 16;
     velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
 	
     if (this.velocity !== velocity) {
