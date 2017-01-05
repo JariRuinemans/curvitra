@@ -109,7 +109,7 @@ BaseAvatar.prototype.directionInLoop = true;
 	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
 	 //BaseAvatar.prototype.setVelocity.call(velocity);
 	 if(!doneTheStuff){
-
+	
 	 console.log(BaseAvatar.prototype.velocity);
 	 doneTheStuff = true;
 	 }else{
@@ -198,7 +198,7 @@ BaseAvatar.prototype.setAngle = function(angle)
  */
 BaseAvatar.prototype.update = function(step) {
 boosta();
-console.log(BaseAvatar.prototype.speed);
+
 };
 
 /**
@@ -349,6 +349,7 @@ BaseAvatar.prototype.setPrinting = function(printing)
         }
     }
 	console.log(BaseAvatar.prototype.velocity);
+	console.log(BaseAvatar.prototype.speed);
 	boosta();
 };
 
