@@ -198,6 +198,7 @@ BaseAvatar.prototype.setAngle = function(angle)
  */
 BaseAvatar.prototype.update = function(step) {
 boosta();
+console.log(BaseAvatar.prototype.speed);
 };
 
 /**
