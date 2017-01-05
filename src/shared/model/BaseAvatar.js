@@ -97,7 +97,8 @@ BaseAvatar.prototype.velocity = 16;
 	 BaseAvatar.prototype.speed = true;
 	 boosta();
 	 BaseAvatar.prototype.velocity = 56;		
-	 BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
+	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
+	 BaseAvatar.prototype.setVelocity.call(56);
 	 if(!doneTheStuff){
 
 	 console.log(BaseAvatar.prototype.velocity);
