@@ -229,10 +229,10 @@ BaseAvatar.prototype.updateVelocities = function()
 {
 	var velocity = this.velocity/1000;
 	if(BaseAvatar.prototype.speed === true){
-    velocity = this.velocity/2000;
+    velocity = velocity*2;
 	console.log('speeeed');
 	}else{
-	velocity = this.velocity/1000;
+	velocity = velocity;
 	}
 	
     this.velocityX = Math.cos(this.angle) * velocity;
