@@ -93,7 +93,7 @@ BaseAvatar.prototype.invincible = false;
  *
  * @type {Boolean}
  */
-BaseAvatar.prototype.directionInLoop = false;
+BaseAvatar.prototype.directionInLoop = true;
 
 /**
  * Equal

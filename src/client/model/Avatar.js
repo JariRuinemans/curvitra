@@ -56,10 +56,10 @@ Avatar.prototype.arrowSize = 200;
 Avatar.prototype.update = function(step)
 {
     if (!this.changed && this.alive) {
+
+    }
         this.updateAngle(step);
         this.updatePosition(step);
-    }
-
     this.startX  = this.canvas.round(this.x * this.canvas.scale - this.canvasRadius);
     this.startY  = this.canvas.round(this.y * this.canvas.scale - this.canvasRadius);
     this.changed = false;
@@ -233,6 +233,10 @@ Avatar.prototype.set = function(property, value)
  * @return {Boolean}
  */
 Avatar.prototype.hasBonus = function()
+{
+    return !this.bonusStack.bonuses.isEmpty();
+};
+Avatar.prototype.hasName = function()
 {
     return !this.bonusStack.bonuses.isEmpty();
 };
