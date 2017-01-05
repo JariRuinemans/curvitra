@@ -247,14 +247,12 @@ BaseAvatar.prototype.setVelocity = function(velocity)
 		BaseAvatar.prototype.velocity = 56;	
 		velocity = Math.max(velocity, BaseAvatar.prototype.velocity);
 	    this.updateVelocities();
-		console.log('speed mode');
 	}
 	else{
 		this.velocity = 16;	
 		BaseAvatar.prototype.velocity = 56;
 		velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
 	    this.updateVelocities();
-		console.log('normal mode');
 	}
 
 
@@ -273,16 +271,16 @@ BaseAvatar.prototype.updateVelocities = function()
 	if( BaseAvatar.prototype.speed === true){
 		this.velocity = 56;
 		BaseAvatar.prototype.velocity = 56;	
-		this.velocityX = Math.cos(this.angle) * velocity *2;
-		this.velocityY = Math.sin(this.angle) * velocity *2;
-		console.log('speed mode');
+		this.velocityX = Math.cos(this.angle) * velocity *20;
+		this.velocityY = Math.sin(this.angle) * velocity *20;
+		console.log('speed mode2');
 	}
 	if(	BaseAvatar.prototype.speed === false){
 		this.velocity = 16;	
 		BaseAvatar.prototype.velocity = 56;
 		this.velocityX = Math.cos(this.angle) * velocity;
 		this.velocityY = Math.sin(this.angle) * velocity;
-		console.log('normal mode');
+		console.log('normal mode2');
 	}
     this.velocityX = Math.cos(this.angle) * velocity;
     this.velocityY = Math.sin(this.angle) * velocity;
