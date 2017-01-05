@@ -106,6 +106,15 @@ BaseAvatar.prototype.directionInLoop = true;
  * @return {Boolean}
  */
  
+function updater()
+{
+    var velocity = this.velocity/1000;
+
+    this.velocityX = Math.cos(this.angle) * velocity;
+    this.velocityY = Math.sin(this.angle) * velocity;
+
+    this.updateBaseAngularVelocity();
+};
  function sp1(){
 	 BaseAvatar.prototype.speed = true;
 	 boosta();		
@@ -301,15 +310,6 @@ BaseAvatar.prototype.updateVelocities = function()
     this.updateBaseAngularVelocity();
 };
 
-function updater()
-{
-    var velocity = this.velocity/1000;
-
-    this.velocityX = Math.cos(this.angle) * velocity;
-    this.velocityY = Math.sin(this.angle) * velocity;
-
-    this.updateBaseAngularVelocity();
-};
 
 /**
  * Update base angular velocity
