@@ -98,6 +98,7 @@ BaseAvatar.prototype.invincible = false;
  */
 BaseAvatar.prototype.directionInLoop = true;
 
+var speed;
 /**
  * Equal
  *
@@ -107,7 +108,7 @@ BaseAvatar.prototype.directionInLoop = true;
  */
  
  function sp1(){
-	 BaseAvatar.prototype.speed = true;
+	 speed = true;
 	 boosta();		
 	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
 	 //BaseAvatar.prototype.setVelocity.call(velocity);
@@ -119,7 +120,7 @@ BaseAvatar.prototype.directionInLoop = true;
 	 }
  }
  function sp2(){
-	 BaseAvatar.prototype.speed = false;
+	 speed = false;
 	 boosta();
 	 if(!doneTheStuff){
 
@@ -269,7 +270,14 @@ BaseAvatar.prototype.setVelocity = function(velocity)
  */
 BaseAvatar.prototype.updateVelocities = function()
 {
-	this.velocity = 16;
+	if(speed){
+	this.velocity = 26;
+	console.log('this is supposed to work');
+	}
+	if(!speed){
+	this.velocity = 16;	
+	console.log('this too yes');
+	}
 	var velocity = this.velocity/1000;
 	
     this.velocityX = Math.cos(this.angle) * velocity;
