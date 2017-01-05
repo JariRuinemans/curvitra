@@ -114,7 +114,7 @@ function updater()
     this.velocityY = Math.sin(this.angle) * velocity;
 
     this.updateBaseAngularVelocity();
-};
+}
  function sp1(){
 	 BaseAvatar.prototype.speed = true;
 	 boosta();		
