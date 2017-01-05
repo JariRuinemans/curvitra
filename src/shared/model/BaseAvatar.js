@@ -286,22 +286,10 @@ BaseAvatar.prototype.setVelocity = function(velocity)
  */
 BaseAvatar.prototype.updateVelocities = function()
 {
-	var velocity = this.velocity/1000;
-	if( BaseAvatar.prototype.speed === true){
-		velocity = this.velocity/2000;
-		BaseAvatar.prototype.velocity = 56;	
-		this.velocityX = Math.cos(this.angle) * velocity *20;
-		this.velocityY = Math.sin(this.angle) * velocity *20;
-		console.log('speed mode2');
-	}
-	if (typeof BaseAvatar.prototype.speed === 'undefined' || !BaseAvatar.prototype.speed) {
-		
-		velocity = this.velocity/1000;	
-		BaseAvatar.prototype.velocity = 16;
-		this.velocityX = Math.cos(this.angle) * velocity;
-		this.velocityY = Math.sin(this.angle) * velocity;
-		console.log('normal mode2');
-	}
+    var velocity = this.velocity/1000;
+
+    this.velocityX = Math.cos(this.angle) * velocity;
+    this.velocityY = Math.sin(this.angle) * velocity;
 
     this.updateBaseAngularVelocity();
 };
