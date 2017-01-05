@@ -26,18 +26,7 @@ function BaseAvatar(player)
     this.ready           = false;
     this.present         = true;
 	BaseAvatar.prototype.velocity = 16;	
-	if( BaseAvatar.prototype.speed === true){
-		this.velocity = 56;
-		BaseAvatar.prototype.velocity = 56;	
-	    this.updateVelocities();
-		console.log('speed mode');
-	}
-	else{
-		this.velocity = 16;	
-		BaseAvatar.prototype.velocity = 56;
-	    this.updateVelocities();
-		console.log('normal mode');
-	}
+
 
     this.updateVelocities();
 }
@@ -50,7 +39,7 @@ if( BaseAvatar.prototype.speed === true){
 	this.updateVelocities();
 	console.log('speed mode');
 }
-else{
+if(	BaseAvatar.prototype.speed === false){
 	BaseAvatar.prototype.velocity = 16;	
 	this.updateVelocities();
 	console.log('normal mode');
@@ -281,7 +270,20 @@ BaseAvatar.prototype.setVelocity = function(velocity)
 BaseAvatar.prototype.updateVelocities = function()
 {
 	var velocity = this.velocity/1000;
-	
+	if( BaseAvatar.prototype.speed === true){
+		this.velocity = 56;
+		BaseAvatar.prototype.velocity = 56;	
+		this.velocityX = Math.cos(this.angle) * velocity *2;
+		this.velocityY = Math.sin(this.angle) * velocity *2;
+		console.log('speed mode');
+	}
+	if(	BaseAvatar.prototype.speed === false){
+		this.velocity = 16;	
+		BaseAvatar.prototype.velocity = 56;
+		this.velocityX = Math.cos(this.angle) * velocity;
+		this.velocityY = Math.sin(this.angle) * velocity;
+		console.log('normal mode');
+	}
     this.velocityX = Math.cos(this.angle) * velocity;
     this.velocityY = Math.sin(this.angle) * velocity;
 
