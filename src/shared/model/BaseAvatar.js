@@ -276,8 +276,8 @@ BaseAvatar.prototype.updateVelocities = function()
 		console.log('speed mode2');
 	}else{
 		velocity = this.velocity/1000;	
-		BaseAvatar.prototype.velocity = 56;
-		this.velocityX = Math.cos(this.angle) * velocity;
+		BaseAvatar.prototype.velocity = 16;
+		this.velocityX = Math.cos(this.angle) * velocity;	
 		this.velocityY = Math.sin(this.angle) * velocity;
 		console.log('normal mode2');
 	}
