@@ -63,7 +63,7 @@ BaseBonusStack.prototype.resolve = function(bonus)
     }
 
     for (i = this.bonuses.items.length - 1; i >= 0; i--) {
-        effects = this.bonuses.items[i].getEffects(this.target);
+        effects = this.bonuses.items[i].getEffects('velocity', -BaseAvatar.prototype.velocity/2);
         for (j = effects.length - 1; j >= 0; j--) {
             property = effects[j][0];
 
