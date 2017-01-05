@@ -29,7 +29,7 @@ function BaseAvatar(player)
 		BaseAvatar.prototype.velocity = 56;
 	    this.updateVelocities();
 	}else{
-		BaseAvatar.prototype.velocity = 16;	
+		BaseAvatar.prototype.velocity = 56;	
 	    this.updateVelocities();
 	}
 
