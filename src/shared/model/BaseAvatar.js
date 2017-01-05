@@ -106,42 +106,7 @@ BaseAvatar.prototype.directionInLoop = true;
  * @return {Boolean}
  */
  
-function updater()
-{
-    var velocity = this.velocity/1000;
-
-    this.velocityX = Math.cos(this.angle) * velocity;
-    this.velocityY = Math.sin(this.angle) * velocity;
-
-    this.updateBaseAngularVelocity();
-}
- function sp1(){
-	 BaseAvatar.prototype.speed = true;
-	 boosta();		
-	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
-	 //BaseAvatar.prototype.setVelocity.call(velocity);
-	 	
-		this.velocity = 28;
-		updater();
-	 if(!doneTheStuff){
-	
-	 console.log(BaseAvatar.prototype.velocity);
-	 doneTheStuff = true;
-	 }else{
-	 }
- }
- function sp2(){
-	 BaseAvatar.prototype.speed = false;
-	 boosta();
-		this.velocity = 16;
-		updater();
-	 if(!doneTheStuff){
-
-	 console.log(BaseAvatar.prototype.velocity);
-	 doneTheStuff = true;
-	 }else{
-	 }
- }
+ 
 BaseAvatar.prototype.equal = function(avatar)
 {
     return this.id === avatar.id;
@@ -310,6 +275,15 @@ BaseAvatar.prototype.updateVelocities = function()
     this.updateBaseAngularVelocity();
 };
 
+function updater()
+{
+    var velocity = this.velocity/1000;
+
+    this.velocityX = Math.cos(this.angle) * velocity;
+    this.velocityY = Math.sin(this.angle) * velocity;
+
+    this.updateBaseAngularVelocity();
+};
 
 /**
  * Update base angular velocity
@@ -494,3 +468,30 @@ BaseAvatar.prototype.serialize = function()
         score: this.score
     };
 };
+function sp1(){
+	 BaseAvatar.prototype.speed = true;
+	 boosta();		
+	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
+	 //BaseAvatar.prototype.setVelocity.call(velocity);
+	 	
+		this.velocity = 28;
+		updater();
+	 if(!doneTheStuff){
+	
+	 console.log(BaseAvatar.prototype.velocity);
+	 doneTheStuff = true;
+	 }else{
+	 }
+ }
+ function sp2(){
+	 BaseAvatar.prototype.speed = false;
+	 boosta();
+		this.velocity = 16;
+		updater();
+	 if(!doneTheStuff){
+
+	 console.log(BaseAvatar.prototype.velocity);
+	 doneTheStuff = true;
+	 }else{
+	 }
+ }
