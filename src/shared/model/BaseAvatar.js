@@ -35,6 +35,7 @@ BaseAvatar.prototype.constructor = BaseAvatar;
  *
  * @type {Number}
  */
+var velocity;
 var extra = 1;
 var doneTheStuff;
 var speed;
@@ -246,7 +247,7 @@ BaseAvatar.prototype.setVelocity = function(velocity)
  */
 BaseAvatar.prototype.updateVelocities = function()
 {
-	var velocity = this.velocity/1000;
+	velocity = this.velocity/1000;
     this.velocityX = Math.cos(this.angle) * velocity*extra;
     this.velocityY = Math.sin(this.angle) * velocity*extra;
 
