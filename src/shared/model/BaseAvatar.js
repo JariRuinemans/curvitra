@@ -37,7 +37,7 @@ BaseAvatar.prototype.constructor = BaseAvatar;
  *
  * @type {Number}
  */
-BaseAvatar.prototype.velocity = 16;
+
 var doneTheStuff;
 
 function boosta(){
@@ -96,10 +96,12 @@ BaseAvatar.prototype.directionInLoop = true;
  function sp1(){
 	 BaseAvatar.prototype.speed = true;
 	 boosta();
+	 BaseAvatar.prototype.velocity = 56;
  }
  function sp2(){
 	 BaseAvatar.prototype.speed = false;
 	 boosta();
+	 BaseAvatar.prototype.velocity = 16;
  }
 BaseAvatar.prototype.equal = function(avatar)
 {
@@ -228,12 +230,6 @@ BaseAvatar.prototype.setVelocity = function(velocity)
 BaseAvatar.prototype.updateVelocities = function()
 {
 	var velocity = this.velocity/1000;
-	if(BaseAvatar.prototype.speed === true){
-    velocity = velocity*2;
-	console.log('speeeed');
-	}else{
-	velocity = velocity;
-	}
 	
     this.velocityX = Math.cos(this.angle) * velocity;
     this.velocityY = Math.sin(this.angle) * velocity;
