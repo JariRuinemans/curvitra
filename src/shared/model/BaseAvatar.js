@@ -32,7 +32,7 @@ function BaseAvatar(player)
 	    this.updateVelocities();
 		console.log('speed mode');
 	}
-	if(	BaseAvatar.prototype.speed === false){
+	else{
 		this.velocity = 16;	
 		BaseAvatar.prototype.velocity = 56;
 	    this.updateVelocities();
@@ -50,7 +50,7 @@ if( BaseAvatar.prototype.speed === true){
 	this.updateVelocities();
 	console.log('speed mode');
 }
-if(	BaseAvatar.prototype.speed === false){
+else{
 	BaseAvatar.prototype.velocity = 16;	
 	this.updateVelocities();
 	console.log('normal mode');
@@ -253,8 +253,22 @@ BaseAvatar.prototype.updatePosition = function(step)
  */
 BaseAvatar.prototype.setVelocity = function(velocity)
 {
+	if( BaseAvatar.prototype.speed === true){
+		this.velocity = 56;
+		BaseAvatar.prototype.velocity = 56;	
+		velocity = Math.max(velocity, BaseAvatar.prototype.velocity);
+	    this.updateVelocities();
+		console.log('speed mode');
+	}
+	else{
+		this.velocity = 16;	
+		BaseAvatar.prototype.velocity = 56;
+		velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
+	    this.updateVelocities();
+		console.log('normal mode');
+	}
 
-    velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
+
 	
     if (this.velocity !== velocity) {
         this.velocity = velocity;
