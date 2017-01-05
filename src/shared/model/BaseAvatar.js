@@ -271,7 +271,7 @@ BaseAvatar.prototype.setVelocity = function(velocity)
 BaseAvatar.prototype.updateVelocities = function()
 {
 	if(speed){
-	this.velocity = 26;
+	this.velocity = 46;
 	console.log('this is supposed to work');
 	}
 	if(!speed){
