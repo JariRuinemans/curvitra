@@ -98,6 +98,7 @@ BaseAvatar.prototype.velocity = 16;
 	 boosta();
 	 if(!doneTheStuff){
 	 BaseAvatar.prototype.velocity = 56;
+	 this.velocity=BaseAvatar.prototype.velocity*5
 	 console.log(BaseAvatar.prototype.velocity);
 	 doneTheStuff = true;
 	 }else{
@@ -108,6 +109,7 @@ BaseAvatar.prototype.velocity = 16;
 	 boosta();
 	 if(!doneTheStuff){
 	 BaseAvatar.prototype.velocity = 16;
+	 this.velocity=BaseAvatar.prototype.velocity
 	 console.log(BaseAvatar.prototype.velocity);
 	 doneTheStuff = true;
 	 }else{
