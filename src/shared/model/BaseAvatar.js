@@ -40,11 +40,13 @@ BaseAvatar.prototype.constructor = BaseAvatar;
 
 var doneTheStuff;
 
-function boosta(){
-	if( BaseAvatar.prototype.speed === true){
-		BaseAvatar.prototype.velocity = 56;
-	}
+
+if( BaseAvatar.prototype.speed === true){
+	BaseAvatar.prototype.velocity = 56;
+}else{
+	BaseAvatar.prototype.velocity = 16;	
 }
+
 /**
  * Turn velocity
  *
@@ -86,7 +88,7 @@ BaseAvatar.prototype.invincible = false;
  * @type {Boolean}
  */
 BaseAvatar.prototype.directionInLoop = true;
-BaseAvatar.prototype.velocity = 16;
+
 /**
  * Equal
  *
