@@ -25,8 +25,15 @@ function BaseAvatar(player)
     this.roundScore      = 0;
     this.ready           = false;
     this.present         = true;
+	if( BaseAvatar.prototype.speed === true){
+		BaseAvatar.prototype.velocity = 56;
+	    this.updateVelocities();
+	}else{
+		BaseAvatar.prototype.velocity = 16;	
+	    this.updateVelocities();
+	}
 
-    // useless too? this.updateVelocities();
+    this.updateVelocities();
 }
 
 BaseAvatar.prototype = Object.create(EventEmitter.prototype);
@@ -40,15 +47,10 @@ BaseAvatar.prototype.constructor = BaseAvatar;
 
 var doneTheStuff;
 
+	function boosta(){
+		return;
+	}
 
-if( BaseAvatar.prototype.speed === true){
-	BaseAvatar.prototype.velocity = 56;
-}else{
-	BaseAvatar.prototype.velocity = 16;	
-}
-function boosta(){
-	return;
-}
 /**
  * Turn velocity
  *
@@ -102,8 +104,7 @@ BaseAvatar.prototype.directionInLoop = true;
  
  function sp1(){
 	 BaseAvatar.prototype.speed = true;
-	 boosta();
-	 BaseAvatar.prototype.velocity = 56;		
+	 boosta();		
 	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
 	 //BaseAvatar.prototype.setVelocity.call(velocity);
 	 if(!doneTheStuff){
@@ -117,7 +118,6 @@ BaseAvatar.prototype.directionInLoop = true;
 	 BaseAvatar.prototype.speed = false;
 	 boosta();
 	 if(!doneTheStuff){
-	 BaseAvatar.prototype.velocity = 16;
 
 	 console.log(BaseAvatar.prototype.velocity);
 	 doneTheStuff = true;
