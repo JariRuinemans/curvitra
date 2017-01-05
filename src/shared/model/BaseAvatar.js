@@ -83,7 +83,7 @@ BaseAvatar.prototype.invincible = false;
  * @type {Boolean}
  */
 BaseAvatar.prototype.directionInLoop = true;
-
+BaseAvatar.prototype.velocity = 16;
 /**
  * Equal
  *
