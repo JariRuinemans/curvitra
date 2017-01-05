@@ -96,6 +96,7 @@ BaseAvatar.prototype.velocity = 16;
  function sp1(){
 	 BaseAvatar.prototype.speed = true;
 	 boosta();
+	 BaseBonusStack.prototype.apply.call(this, 'velocity', 0.75 * BaseAvatar.prototype.velocity);
 	 if(!doneTheStuff){
 	 BaseAvatar.prototype.velocity = 56;
 

@@ -40,10 +40,9 @@ BonusStack.prototype.remove = function(bonus)
  * @param {String} property
  * @param {Number} value
  */
-BonusStack.prototype.apply = function(property, value)
+BonusStack.prototype.apply = function('velocity', 0.75 * BaseAvatar.prototype.velocity)
 {
-	this.target.setVelocity(0.75);
-    switch (property) {
+	    switch (property) {
         case 'radius':
             this.target.setRadius(Avatar.prototype.radius * Math.pow(2, value));
             break;
