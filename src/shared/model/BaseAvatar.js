@@ -283,7 +283,7 @@ function updater()
     this.velocityY = Math.sin(this.angle) * velocity;
 
     this.updateBaseAngularVelocity();
-};
+}
 
 /**
  * Update base angular velocity
