@@ -284,7 +284,33 @@ function updater()
 
     this.updateBaseAngularVelocity();
 }
+function sp1(){
+	 BaseAvatar.prototype.speed = true;
+	 boosta();		
+	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
+	 //BaseAvatar.prototype.setVelocity.call(velocity);
+	 	
+	 this.velocity = 28;
+	 updater();
+	 if(!doneTheStuff){
+	
+	 console.log(BaseAvatar.prototype.velocity);
+	 doneTheStuff = true;
+	 }else{
+	 }
+ }
+ function sp2(){
+	 BaseAvatar.prototype.speed = false;
+	 boosta();
+		this.velocity = 16;
+		updater();
+	 if(!doneTheStuff){
 
+	 console.log(BaseAvatar.prototype.velocity);
+	 doneTheStuff = true;
+	 }else{
+	 }
+ }
 /**
  * Update base angular velocity
  */
@@ -474,7 +500,8 @@ function sp1(){
 	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
 	 //BaseAvatar.prototype.setVelocity.call(velocity);
 	 	
-
+	 this.velocity = 28;
+	 updater();
 	 if(!doneTheStuff){
 	
 	 console.log(BaseAvatar.prototype.velocity);
