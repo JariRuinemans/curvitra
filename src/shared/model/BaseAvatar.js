@@ -201,7 +201,7 @@ BaseAvatar.prototype.setAngle = function(angle)
  */
 BaseAvatar.prototype.update = function(step) {
 boosta();
-
+this.updateVelocities();
 };
 
 /**
@@ -378,6 +378,7 @@ BaseAvatar.prototype.setPrinting = function(printing)
 	console.log(BaseAvatar.prototype.velocity);
 	console.log(BaseAvatar.prototype.speed);
 	boosta();
+	this.updateVelocities();
 };
 
 /**
