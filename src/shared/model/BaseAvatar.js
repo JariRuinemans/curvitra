@@ -267,7 +267,6 @@ BaseAvatar.prototype.setVelocity = function(velocity)
  */
 BaseAvatar.prototype.updateVelocities = function()
 {
-	var velocity = this.velocity/1000;
 	if( BaseAvatar.prototype.speed === true){
 		var velocity = this.velocity/5000;
 		BaseAvatar.prototype.velocity = 56;	
