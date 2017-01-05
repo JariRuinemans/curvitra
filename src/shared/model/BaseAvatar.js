@@ -335,6 +335,7 @@ BaseAvatar.prototype.setPrinting = function(printing)
             this.trail.clear();
         }
     }
+	console.log(BaseAvatar.prototype.velocity);
 	boosta();
 };
 
