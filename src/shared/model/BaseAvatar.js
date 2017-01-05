@@ -42,35 +42,10 @@ var speed;
 		return;
 	}
 
-function sp1(){
-	speed = true;
-	extra = 2;
-	 boosta();		
-	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
-	 //BaseAvatar.prototype.setVelocity.call(velocity);
-	if(!doneTheStuff){
 
-		console.log(BaseAvatar.prototype.velocity);
-		doneTheStuff = true;
-	}else{
-	}
-}
-function sp2(){
-	speed = false;
-	extra = 1;
-	boosta();
-	if(!doneTheStuff){
 
-	console.log(BaseAvatar.prototype.velocity);
-	doneTheStuff = true;
-	}else{
-	}
- }
-if(speed){
-	BaseAvatar.prototype.velocity = 46;	
-}else{
-	BaseAvatar.prototype.velocity = 16;	
-}
+BaseAvatar.prototype.velocity = 16;	
+
 /**
  * Turn velocity
  *
@@ -149,7 +124,30 @@ BaseAvatar.prototype.addPoint = function(x, y)
 {
     this.trail.addPoint(x, y);
 };
+function sp1(){
+	speed = true;
+	extra = 2;
+	 boosta();		
+	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
+	 //BaseAvatar.prototype.setVelocity.call(velocity);
+	if(!doneTheStuff){
 
+		console.log(BaseAvatar.prototype.velocity);
+		doneTheStuff = true;
+	}else{
+	}
+}
+function sp2(){
+	speed = false;
+	extra = 1;
+	boosta();
+	if(!doneTheStuff){
+
+	console.log(BaseAvatar.prototype.velocity);
+	doneTheStuff = true;
+	}else{
+	}
+ }
 /**
  * Update angular velocity
  *
@@ -248,8 +246,8 @@ BaseAvatar.prototype.setVelocity = function(velocity)
  */
 BaseAvatar.prototype.updateVelocities = function()
 {
-	var velocity = this.velocity/1000*extra;
-	
+	var velocity = this.velocity/1000;
+	velocity = velocity*extra;
     this.velocityX = Math.cos(this.angle) * velocity;
     this.velocityY = Math.sin(this.angle) * velocity;
 
