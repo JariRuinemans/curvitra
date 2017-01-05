@@ -25,17 +25,6 @@ function BaseAvatar(player)
     this.roundScore      = 0;
     this.ready           = false;
     this.present         = true;
-	if( BaseAvatar.prototype.speed === true){
-		BaseAvatar.prototype.velocity = 56;
-	    this.updateVelocities();
-		console.log('speed mode');
-	}else{
-		BaseAvatar.prototype.velocity = 16;	
-	    this.updateVelocities();
-		console.log('normal mode');
-	}
-
-    this.updateVelocities();
 }
 
 BaseAvatar.prototype = Object.create(EventEmitter.prototype);
@@ -48,11 +37,38 @@ BaseAvatar.prototype.constructor = BaseAvatar;
  */
 
 var doneTheStuff;
-
+var speed;
 	function boosta(){
 		return;
 	}
 
+function sp1(){
+	speed = true;
+	 boosta();		
+	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
+	 //BaseAvatar.prototype.setVelocity.call(velocity);
+	if(!doneTheStuff){
+
+		console.log(BaseAvatar.prototype.velocity);
+		doneTheStuff = true;
+	}else{
+	}
+}
+function sp2(){
+	speed = false;
+	boosta();
+	if(!doneTheStuff){
+
+	console.log(BaseAvatar.prototype.velocity);
+	doneTheStuff = true;
+	}else{
+	}
+ }
+if(speed){
+	BaseAvatar.prototype.velocity = 46;	
+}else{
+	BaseAvatar.prototype.velocity = 16;	
+}
 /**
  * Turn velocity
  *
@@ -102,29 +118,8 @@ BaseAvatar.prototype.directionInLoop = true;
  *
  * @return {Boolean}
  */
- 
- function sp1(){
-	 BaseAvatar.prototype.speed = true;
-	 boosta();		
-	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
-	 //BaseAvatar.prototype.setVelocity.call(velocity);
-	 if(!doneTheStuff){
 
-	 console.log(BaseAvatar.prototype.velocity);
-	 doneTheStuff = true;
-	 }else{
-	 }
- }
- function sp2(){
-	 BaseAvatar.prototype.speed = false;
-	 boosta();
-	 if(!doneTheStuff){
 
-	 console.log(BaseAvatar.prototype.velocity);
-	 doneTheStuff = true;
-	 }else{
-	 }
- }
 BaseAvatar.prototype.equal = function(avatar)
 {
     return this.id === avatar.id;
