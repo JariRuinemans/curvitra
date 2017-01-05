@@ -35,7 +35,7 @@ BaseAvatar.prototype.constructor = BaseAvatar;
  *
  * @type {Number}
  */
-
+var extra;
 var doneTheStuff;
 var speed;
 	function boosta(){
@@ -44,6 +44,7 @@ var speed;
 
 function sp1(){
 	speed = true;
+	extra = 2;
 	 boosta();		
 	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
 	 //BaseAvatar.prototype.setVelocity.call(velocity);
@@ -56,6 +57,7 @@ function sp1(){
 }
 function sp2(){
 	speed = false;
+	extra = 1;
 	boosta();
 	if(!doneTheStuff){
 
@@ -246,7 +248,7 @@ BaseAvatar.prototype.setVelocity = function(velocity)
  */
 BaseAvatar.prototype.updateVelocities = function()
 {
-	var velocity = this.velocity/1000*5;
+	var velocity = this.velocity/1000*extra;
 	
     this.velocityX = Math.cos(this.angle) * velocity;
     this.velocityY = Math.sin(this.angle) * velocity;
