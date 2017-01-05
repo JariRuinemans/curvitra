@@ -25,8 +25,15 @@ function BaseAvatar(player)
     this.roundScore      = 0;
     this.ready           = false;
     this.present         = true;
-	BaseAvatar.prototype.velocity = 16;	
-
+	if( BaseAvatar.prototype.speed === true){
+		BaseAvatar.prototype.velocity = 56;
+	    this.updateVelocities();
+		console.log('speed mode');
+	}else{
+		BaseAvatar.prototype.velocity = 16;	
+	    this.updateVelocities();
+		console.log('normal mode');
+	}
 
     this.updateVelocities();
 }
@@ -34,16 +41,6 @@ function BaseAvatar(player)
 BaseAvatar.prototype = Object.create(EventEmitter.prototype);
 BaseAvatar.prototype.constructor = BaseAvatar;
 
-if( BaseAvatar.prototype.speed === true){
-	BaseAvatar.prototype.velocity = 56;
-	this.updateVelocities();
-	console.log('speed mode');
-}
-if(	BaseAvatar.prototype.speed === false){
-	BaseAvatar.prototype.velocity = 16;	
-	this.updateVelocities();
-	console.log('normal mode');
-}
 /**
  * Movement velocity
  *
@@ -96,9 +93,8 @@ BaseAvatar.prototype.invincible = false;
  *
  * @type {Boolean}
  */
-BaseAvatar.prototype.directionInLoop = true;
+BaseAvatar.prototype.directionInLoop = false;
 
-var speed;
 /**
  * Equal
  *
@@ -108,19 +104,19 @@ var speed;
  */
  
  function sp1(){
-	 speed = true;
+	 BaseAvatar.prototype.speed = true;
 	 boosta();		
 	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
 	 //BaseAvatar.prototype.setVelocity.call(velocity);
 	 if(!doneTheStuff){
-	
+
 	 console.log(BaseAvatar.prototype.velocity);
 	 doneTheStuff = true;
 	 }else{
 	 }
  }
  function sp2(){
-	 speed = false;
+	 BaseAvatar.prototype.speed = false;
 	 boosta();
 	 if(!doneTheStuff){
 
@@ -202,7 +198,6 @@ BaseAvatar.prototype.setAngle = function(angle)
  */
 BaseAvatar.prototype.update = function(step) {
 boosta();
-
 };
 
 /**
@@ -244,10 +239,7 @@ BaseAvatar.prototype.updatePosition = function(step)
 BaseAvatar.prototype.setVelocity = function(velocity)
 {
 
-	velocity = Math.max(velocity, BaseAvatar.prototype.velocity);
-
-
-
+    velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
 	
     if (this.velocity !== velocity) {
         this.velocity = velocity;
@@ -259,16 +251,7 @@ BaseAvatar.prototype.setVelocity = function(velocity)
  */
 BaseAvatar.prototype.updateVelocities = function()
 {
-	if(speed){
-	this.velocity = 46;
-	var velocity = this.velocity/5000;
-	console.log('this is supposed to work');
-	}
-	if(!speed){
 	var velocity = this.velocity/1000;
-	}
-
-
 	
     this.velocityX = Math.cos(this.angle) * velocity;
     this.velocityY = Math.sin(this.angle) * velocity;
@@ -365,7 +348,6 @@ BaseAvatar.prototype.setPrinting = function(printing)
         }
     }
 	console.log(BaseAvatar.prototype.velocity);
-	console.log(BaseAvatar.prototype.speed);
 	boosta();
 };
 
