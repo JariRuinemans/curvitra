@@ -41,19 +41,6 @@ BaseAvatar.prototype.velocity = 16;
 var doneTheStuff;
 
 function boosta(){
-	if(BaseAvatar.prototype.speed === true){
-		if (!doneTheStuff) {
-		doneTheStuff = true;
-		console.log('speeeed');
-		BaseAvatar.prototype.velocity = 36;
-		}
-	}else{
-		if (!doneTheStuff) {
-		console.log('no speed :c');
-		BaseAvatar.prototype.velocity = 16;
-		}
-	}
-	
 }
 /**
  * Turn velocity
@@ -243,6 +230,7 @@ BaseAvatar.prototype.updateVelocities = function()
 	var velocity = this.velocity/1000;
 	if(BaseAvatar.prototype.speed === true){
     velocity = this.velocity/2000;
+	console.log('speeeed');
 	}else{
 	velocity = this.velocity/1000;
 	}
