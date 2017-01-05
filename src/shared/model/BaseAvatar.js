@@ -261,10 +261,14 @@ BaseAvatar.prototype.updateVelocities = function()
 {
 	if(speed){
 	this.velocity = 46;
+	var velocity = this.velocity/5000;
 	console.log('this is supposed to work');
 	}
-
+	if(!speed){
 	var velocity = this.velocity/1000;
+	}
+
+
 	
     this.velocityX = Math.cos(this.angle) * velocity;
     this.velocityY = Math.sin(this.angle) * velocity;
