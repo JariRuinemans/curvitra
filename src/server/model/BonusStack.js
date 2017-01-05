@@ -33,16 +33,15 @@ BonusStack.prototype.remove = function(bonus)
     this.emit('change', {avatar: this.target, method: 'remove', bonus: bonus});
 };
 
-
 /**
  * Apply the value to target's property
  *
  * @param {String} property
  * @param {Number} value
  */
-BonusStack.prototype.apply = function('velocity', 0.75 * BaseAvatar.prototype.velocity)
+BonusStack.prototype.apply = function(property, value)
 {
-	    switch (property) {
+    switch (property) {
         case 'radius':
             this.target.setRadius(Avatar.prototype.radius * Math.pow(2, value));
             break;
