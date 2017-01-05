@@ -474,8 +474,7 @@ function sp1(){
 	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
 	 //BaseAvatar.prototype.setVelocity.call(velocity);
 	 	
-		this.velocity = 28;
-		updater();
+
 	 if(!doneTheStuff){
 	
 	 console.log(BaseAvatar.prototype.velocity);
