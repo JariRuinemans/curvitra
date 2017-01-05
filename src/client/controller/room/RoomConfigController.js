@@ -90,10 +90,8 @@ RoomConfigController.prototype.togglePreset = function(preset)
 			BaseAvatar.prototype.speed = true;
 		}else {
 			console.log('different one.');
-			sp2();
 			disabledit = true;
 			setTimeout(enableStuff, 3000);
-			BaseAvatar.prototype.speed = false;
 		}
 	}
     this.applyPreset(preset);
