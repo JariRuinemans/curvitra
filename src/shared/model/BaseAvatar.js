@@ -97,11 +97,13 @@ BaseAvatar.prototype.directionInLoop = true;
 	 BaseAvatar.prototype.speed = true;
 	 boosta();
 	 BaseAvatar.prototype.velocity = 56;
+	 console.log(BaseAvatar.prototype.velocity);
  }
  function sp2(){
 	 BaseAvatar.prototype.speed = false;
 	 boosta();
 	 BaseAvatar.prototype.velocity = 16;
+	 console.log(BaseAvatar.prototype.velocity);
  }
 BaseAvatar.prototype.equal = function(avatar)
 {
