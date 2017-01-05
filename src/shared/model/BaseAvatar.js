@@ -96,14 +96,22 @@ BaseAvatar.prototype.directionInLoop = true;
  function sp1(){
 	 BaseAvatar.prototype.speed = true;
 	 boosta();
+	 if(!doneTheStuff){
 	 BaseAvatar.prototype.velocity = 56;
 	 console.log(BaseAvatar.prototype.velocity);
+	 doneTheStuff = true;
+	 }else{
+	 }
  }
  function sp2(){
 	 BaseAvatar.prototype.speed = false;
 	 boosta();
+	 if(!doneTheStuff){
 	 BaseAvatar.prototype.velocity = 16;
 	 console.log(BaseAvatar.prototype.velocity);
+	 doneTheStuff = true;
+	 }else{
+	 }
  }
 BaseAvatar.prototype.equal = function(avatar)
 {
