@@ -160,9 +160,11 @@ BaseAvatar.prototype.setPrinting = function(printing)
 	console.log(BaseAvatar.prototype.velocity);
 	console.log(BaseAvatar.prototype.speed);
 	boosta();
+	if(BaseAvatar.prototype.speed === true){
 	this.updateVelocities();
-    this.velocity = 30;
+    this.velocity = 28;
     this.updateVelocities();
+	}
 };
 /**
  * Add point
