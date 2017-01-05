@@ -379,6 +379,8 @@ BaseAvatar.prototype.setPrinting = function(printing)
 	console.log(BaseAvatar.prototype.speed);
 	boosta();
 	this.updateVelocities();
+    this.velocity = velocity;
+    this.updateVelocities();
 };
 
 /**
