@@ -42,6 +42,16 @@ function BaseAvatar(player)
 BaseAvatar.prototype = Object.create(EventEmitter.prototype);
 BaseAvatar.prototype.constructor = BaseAvatar;
 
+if( BaseAvatar.prototype.speed === true){
+	BaseAvatar.prototype.velocity = 56;
+	this.updateVelocities();
+	console.log('speed mode');
+}
+if(	BaseAvatar.prototype.speed === false){
+	BaseAvatar.prototype.velocity = 16;	
+	this.updateVelocities();
+	console.log('normal mode');
+}
 /**
  * Movement velocity
  *

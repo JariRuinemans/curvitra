@@ -85,9 +85,11 @@ RoomConfigController.prototype.togglePreset = function(preset)
 		if (preset.hasName('Speed of light')) {
 			console.log('YES ACTIVATED YES YES');
 			sp1();
+			BaseAvatar.prototype.velocity = 56;
 		}else {
 			console.log('different one.');
 			sp2();
+			BaseAvatar.prototype.velocity = 16;
 		}
 	}
     this.applyPreset(preset);
