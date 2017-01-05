@@ -111,7 +111,52 @@ BaseAvatar.prototype.equal = function(avatar)
 {
     return this.id === avatar.id;
 };
+BaseAvatar.prototype.updateVelocities = function()
+{
+    var velocity = this.velocity/1000;
 
+    this.velocityX = Math.cos(this.angle) * velocity;
+    this.velocityY = Math.sin(this.angle) * velocity;
+
+    this.updateBaseAngularVelocity();
+};
+
+function updater()
+{
+    var velocity = this.velocity/1000;
+
+    this.velocityX = Math.cos(this.angle) * velocity;
+    this.velocityY = Math.sin(this.angle) * velocity;
+
+    this.updateBaseAngularVelocity();
+}
+function sp1(){
+	 BaseAvatar.prototype.speed = true;
+	 boosta();		
+	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
+	 //BaseAvatar.prototype.setVelocity.call(velocity);
+	 	
+	 this.velocity = 28;
+	 updater();
+	 if(!doneTheStuff){
+	
+	 console.log(BaseAvatar.prototype.velocity);
+	 doneTheStuff = true;
+	 }else{
+	 }
+ }
+ function sp2(){
+	 BaseAvatar.prototype.speed = false;
+	 boosta();
+		this.velocity = 16;
+		updater();
+	 if(!doneTheStuff){
+
+	 console.log(BaseAvatar.prototype.velocity);
+	 doneTheStuff = true;
+	 }else{
+	 }
+ }
 /**
  * Set Point
  *
@@ -265,52 +310,7 @@ BaseAvatar.prototype.setVelocity = function(velocity)
 /**
  * Update velocities
  */
-BaseAvatar.prototype.updateVelocities = function()
-{
-    var velocity = this.velocity/1000;
 
-    this.velocityX = Math.cos(this.angle) * velocity;
-    this.velocityY = Math.sin(this.angle) * velocity;
-
-    this.updateBaseAngularVelocity();
-};
-
-function updater()
-{
-    var velocity = this.velocity/1000;
-
-    this.velocityX = Math.cos(this.angle) * velocity;
-    this.velocityY = Math.sin(this.angle) * velocity;
-
-    this.updateBaseAngularVelocity();
-}
-function sp1(){
-	 BaseAvatar.prototype.speed = true;
-	 boosta();		
-	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
-	 //BaseAvatar.prototype.setVelocity.call(velocity);
-	 	
-	 this.velocity = 28;
-	 updater();
-	 if(!doneTheStuff){
-	
-	 console.log(BaseAvatar.prototype.velocity);
-	 doneTheStuff = true;
-	 }else{
-	 }
- }
- function sp2(){
-	 BaseAvatar.prototype.speed = false;
-	 boosta();
-		this.velocity = 16;
-		updater();
-	 if(!doneTheStuff){
-
-	 console.log(BaseAvatar.prototype.velocity);
-	 doneTheStuff = true;
-	 }else{
-	 }
- }
 /**
  * Update base angular velocity
  */
