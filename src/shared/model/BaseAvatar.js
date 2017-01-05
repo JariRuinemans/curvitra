@@ -29,7 +29,8 @@ function BaseAvatar(player)
 		BaseAvatar.prototype.velocity = 56;
 	    this.updateVelocities();
 		console.log('speed mode');
-	}else{
+	}
+	if(	BaseAvatar.prototype.speed === false){}
 		BaseAvatar.prototype.velocity = 16;	
 	    this.updateVelocities();
 		console.log('normal mode');

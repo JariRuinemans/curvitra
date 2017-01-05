@@ -36,7 +36,7 @@ function RoomConfigController($scope, repository)
 
 RoomConfigController.prototype = Object.create(AbstractController.prototype);
 RoomConfigController.prototype.constructor = RoomConfigController;
-var disabledit = false;
+
 /**
  * On room joined
  */
@@ -85,21 +85,15 @@ RoomConfigController.prototype.togglePreset = function(preset)
 		if (preset.hasName('Speed of light')) {
 			console.log('YES ACTIVATED YES YES');
 			sp1();
-			disabledit = true;
-			setTimeout(enableStuff, 3000);
-			BaseAvatar.prototype.speed = true;
 		}else {
 			console.log('different one.');
-			disabledit = true;
-			setTimeout(enableStuff, 3000);
+			sp2();
 		}
 	}
     this.applyPreset(preset);
 
 };
-function enableStuff(){
-	disabledit = false;
-}
+
 /**
  * Apply the given preset
  *
