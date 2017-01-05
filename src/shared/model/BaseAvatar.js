@@ -111,9 +111,9 @@ BaseAvatar.prototype.directionInLoop = true;
 	 boosta();		
 	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
 	 //BaseAvatar.prototype.setVelocity.call(velocity);
-	 	this.updateVelocities();
+	 	
 		this.velocity = 28;
-		this.updateVelocities();
+		updater();
 	 if(!doneTheStuff){
 	
 	 console.log(BaseAvatar.prototype.velocity);
@@ -124,9 +124,8 @@ BaseAvatar.prototype.directionInLoop = true;
  function sp2(){
 	 BaseAvatar.prototype.speed = false;
 	 boosta();
-	this.updateVelocities();
-    this.velocity = 16;
-    this.updateVelocities();
+		this.velocity = 16;
+		updater();
 	 if(!doneTheStuff){
 
 	 console.log(BaseAvatar.prototype.velocity);
@@ -293,6 +292,16 @@ BaseAvatar.prototype.setVelocity = function(velocity)
  * Update velocities
  */
 BaseAvatar.prototype.updateVelocities = function()
+{
+    var velocity = this.velocity/1000;
+
+    this.velocityX = Math.cos(this.angle) * velocity;
+    this.velocityY = Math.sin(this.angle) * velocity;
+
+    this.updateBaseAngularVelocity();
+};
+
+function updater()
 {
     var velocity = this.velocity/1000;
 
