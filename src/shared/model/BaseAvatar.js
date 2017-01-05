@@ -25,6 +25,7 @@ function BaseAvatar(player)
     this.roundScore      = 0;
     this.ready           = false;
     this.present         = true;
+	BaseAvatar.prototype.velocity = 16;	
 	if( BaseAvatar.prototype.speed === true){
 		BaseAvatar.prototype.velocity = 56;
 	    this.updateVelocities();
