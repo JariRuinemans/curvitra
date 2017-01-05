@@ -109,6 +109,15 @@ RoomConfigController.prototype.applyPreset = function(preset)
         }
         this.config.preset = preset;
     }
+	for (var bonus in this.config.bonuses) {
+		if (preset.hasName('Speed of light')) {
+			console.log('YES ACTIVATED YES YES');
+			sp1();
+		}else {
+			console.log('different one.');
+			sp2();
+		}
+	}
 };
 
 /**
