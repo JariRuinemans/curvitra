@@ -55,7 +55,7 @@ BaseBonusStack.prototype.resolve = function(bonus)
         effects, property, i, j;
 
     if (typeof(bonus) !== 'undefined') {
-        effects = bonus.getEffects(this.target);
+        effects = bonus.getEffects('velocity', -BaseAvatar.prototype.velocity/2);
         for (i = effects.length - 1; i >= 0; i--) {
             property = effects[i][0];
             properties[property] = this.getDefaultProperty(property);
