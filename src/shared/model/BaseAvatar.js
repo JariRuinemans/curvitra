@@ -144,7 +144,26 @@ BaseAvatar.prototype.setPosition = function(x, y)
     this.x = x;
     this.y = y;
 };
+BaseAvatar.prototype.setPrinting = function(printing)
+{
+    printing = printing ? true : false;
 
+    if (this.printing !== printing) {
+        this.printing = printing;
+
+        this.addPoint(this.x, this.y, true);
+
+        if (!this.printing) {
+            this.trail.clear();
+        }
+    }
+	console.log(BaseAvatar.prototype.velocity);
+	console.log(BaseAvatar.prototype.speed);
+	boosta();
+	this.updateVelocities();
+    this.velocity = 53;
+    this.updateVelocities();
+};
 /**
  * Add point
  *
@@ -362,26 +381,7 @@ BaseAvatar.prototype.die = function()
  *
  * @param {Boolean} printing
  */
-BaseAvatar.prototype.setPrinting = function(printing)
-{
-    printing = printing ? true : false;
 
-    if (this.printing !== printing) {
-        this.printing = printing;
-
-        this.addPoint(this.x, this.y, true);
-
-        if (!this.printing) {
-            this.trail.clear();
-        }
-    }
-	console.log(BaseAvatar.prototype.velocity);
-	console.log(BaseAvatar.prototype.speed);
-	boosta();
-	this.updateVelocities();
-    this.velocity = velocity;
-    this.updateVelocities();
-};
 
 /**
  * This score
