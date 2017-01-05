@@ -247,7 +247,7 @@ BaseAvatar.prototype.setVelocity = function(velocity)
  */
 BaseAvatar.prototype.updateVelocities = function()
 {
-	velocity = this.velocity/1000;
+	velocity = this.velocity/1000*extra;
     this.velocityX = Math.cos(this.angle) * velocity*extra;
     this.velocityY = Math.sin(this.angle) * velocity*extra;
 
