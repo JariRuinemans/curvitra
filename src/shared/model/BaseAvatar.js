@@ -46,7 +46,9 @@ if( BaseAvatar.prototype.speed === true){
 }else{
 	BaseAvatar.prototype.velocity = 16;	
 }
-
+function boosta(){
+	return
+}
 /**
  * Turn velocity
  *
