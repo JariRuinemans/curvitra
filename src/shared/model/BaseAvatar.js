@@ -237,7 +237,7 @@ BaseAvatar.prototype.setVelocity = function(velocity)
     velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
 	
     if (this.velocity !== velocity) {
-        this.velocity = velocity;
+        this.velocity = velocity*extra;
         this.updateVelocities();
     }
 };
@@ -247,9 +247,8 @@ BaseAvatar.prototype.setVelocity = function(velocity)
 BaseAvatar.prototype.updateVelocities = function()
 {
 	var velocity = this.velocity/1000;
-	velocity = velocity*extra;
-    this.velocityX = Math.cos(this.angle) * velocity;
-    this.velocityY = Math.sin(this.angle) * velocity;
+    this.velocityX = Math.cos(this.angle) * velocity*extra;
+    this.velocityY = Math.sin(this.angle) * velocity*extra;
 
     this.updateBaseAngularVelocity();
 };
