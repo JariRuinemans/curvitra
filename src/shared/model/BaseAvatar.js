@@ -27,12 +27,12 @@ function BaseAvatar(player)
     this.present         = true;
 	BaseAvatar.prototype.velocity = 16;	
 	if( BaseAvatar.prototype.speed === true){
-		BaseAvatar.prototype.velocity = 56;
+		this.velocity = 56;
 	    this.updateVelocities();
 		console.log('speed mode');
 	}
 	if(	BaseAvatar.prototype.speed === false){
-		BaseAvatar.prototype.velocity = 16;	
+		this.velocity = 16;	
 	    this.updateVelocities();
 		console.log('normal mode');
 	}
