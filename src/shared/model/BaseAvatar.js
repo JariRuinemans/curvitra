@@ -28,11 +28,13 @@ function BaseAvatar(player)
 	BaseAvatar.prototype.velocity = 16;	
 	if( BaseAvatar.prototype.speed === true){
 		this.velocity = 56;
+		BaseAvatar.prototype.velocity = 56;	
 	    this.updateVelocities();
 		console.log('speed mode');
 	}
 	if(	BaseAvatar.prototype.speed === false){
 		this.velocity = 16;	
+		BaseAvatar.prototype.velocity = 56;
 	    this.updateVelocities();
 		console.log('normal mode');
 	}
