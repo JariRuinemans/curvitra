@@ -25,6 +25,8 @@ function BaseAvatar(player)
     this.roundScore      = 0;
     this.ready           = false;
     this.present         = true;
+
+    // useless too? this.updateVelocities();
 }
 
 BaseAvatar.prototype = Object.create(EventEmitter.prototype);
@@ -35,17 +37,7 @@ BaseAvatar.prototype.constructor = BaseAvatar;
  *
  * @type {Number}
  */
-var velocity;
-var extra = 1;
-var doneTheStuff;
-var speed;
-	function boosta(){
-		return;
-	}
-
-
-
-BaseAvatar.prototype.velocity = 16;	
+BaseAvatar.prototype.velocity = 16;
 
 /**
  * Turn velocity
@@ -96,8 +88,6 @@ BaseAvatar.prototype.directionInLoop = true;
  *
  * @return {Boolean}
  */
-
-
 BaseAvatar.prototype.equal = function(avatar)
 {
     return this.id === avatar.id;
@@ -125,30 +115,7 @@ BaseAvatar.prototype.addPoint = function(x, y)
 {
     this.trail.addPoint(x, y);
 };
-function sp1(){
-	speed = true;
-	extra = 2;
-	 boosta();		
-	 //BaseAvatar.prototype.setVelocity.call(this, 'velocity', 0.75 * 16);
-	 //BaseAvatar.prototype.setVelocity.call(velocity);
-	if(!doneTheStuff){
 
-		console.log(BaseAvatar.prototype.velocity);
-		doneTheStuff = true;
-	}else{
-	}
-}
-function sp2(){
-	speed = false;
-	extra = 1;
-	boosta();
-	if(!doneTheStuff){
-
-	console.log(BaseAvatar.prototype.velocity);
-	doneTheStuff = true;
-	}else{
-	}
- }
 /**
  * Update angular velocity
  *
@@ -192,9 +159,7 @@ BaseAvatar.prototype.setAngle = function(angle)
  *
  * @param {Number} step
  */
-BaseAvatar.prototype.update = function(step) {
-boosta();
-};
+BaseAvatar.prototype.update = function(step) {};
 
 /**
  * Add angle
@@ -207,9 +172,8 @@ BaseAvatar.prototype.updateAngle = function(step)
         if (this.directionInLoop) {
             this.setAngle(this.angle + this.angularVelocity * step);
         } else {
-            this.setAngle(this.angle + this.angularVelocity * step);
+            this.setAngle(this.angle + this.angularVelocity);
             this.updateAngularVelocity(0);
-			
         }
     }
 };
@@ -234,22 +198,23 @@ BaseAvatar.prototype.updatePosition = function(step)
  */
 BaseAvatar.prototype.setVelocity = function(velocity)
 {
-
     velocity = Math.max(velocity, BaseAvatar.prototype.velocity/2);
-	
+
     if (this.velocity !== velocity) {
         this.velocity = velocity;
         this.updateVelocities();
     }
 };
+
 /**
  * Update velocities
  */
 BaseAvatar.prototype.updateVelocities = function()
 {
-	velocity = this.velocity/1000;
-    this.velocityX = Math.cos(this.angle) * velocity*extra;
-    this.velocityY = Math.sin(this.angle) * velocity*extra;
+    var velocity = this.velocity/1000;
+
+    this.velocityX = Math.cos(this.angle) * velocity;
+    this.velocityY = Math.sin(this.angle) * velocity;
 
     this.updateBaseAngularVelocity();
 };
@@ -261,7 +226,7 @@ BaseAvatar.prototype.updateBaseAngularVelocity = function()
 {
     if (this.directionInLoop) {
         var ratio = this.velocity / BaseAvatar.prototype.velocity;
-        this.angularVelocityBase = ratio*1.4 * BaseAvatar.prototype.angularVelocityBase + Math.log(1/ratio)/3000;
+        this.angularVelocityBase = ratio * BaseAvatar.prototype.angularVelocityBase + Math.log(1/ratio)/1000;
         this.updateAngularVelocity();
     }
 };
@@ -342,8 +307,6 @@ BaseAvatar.prototype.setPrinting = function(printing)
             this.trail.clear();
         }
     }
-	console.log(BaseAvatar.prototype.velocity);
-	boosta();
 };
 
 /**
